@@ -1,0 +1,143 @@
+# Expat.GH 🌍
+
+**News, jobs, real estate and community for Africans living abroad.**
+
+A fully functional, production-ready news website for the African diaspora. Built as a clean, multi-page HTML/CSS/JS project — no frameworks, no build tools required.
+
+---
+
+## 🚀 Live Preview
+
+Open `index.html` in any browser — no server needed.
+
+---
+
+## 📁 Project Structure
+
+```
+expat.gh/
+├── index.html              # Homepage
+├── css/
+│   └── style.css           # All styles
+├── js/
+│   └── main.js             # All interactions
+├── images/                 # Add your images here
+└── pages/
+    ├── jobs.html
+    ├── realestate.html
+    ├── visa.html
+    ├── community.html
+    ├── culture.html
+    ├── directory.html
+    ├── newsletter.html
+    ├── about.html
+    ├── advertise.html
+    ├── contact.html
+    ├── write-for-us.html
+    ├── terms.html
+    ├── privacy.html
+    └── cookies.html
+```
+
+---
+
+## ✅ Features
+
+- Sticky header with full dropdown navigation (8 nav items, each with subcategories)
+- Breaking news ticker
+- Hero article with overlay text
+- Category tabs (News / Finance / Visa / Business / Expat Life / Culture / Health / Work)
+- Article list with thumbnails
+- Real estate property grid
+- Right sidebar:
+  - Newsletter signup
+  - Trending articles
+  - Community poll
+  - Featured jobs
+  - Browse by country (10 African nations)
+  - Business directory
+- Article modal popups with full content
+- Affiliate ad banners (monetization-ready)
+- Toast notifications
+- Mobile responsive design
+- Hamburger menu for mobile
+- Smooth animations
+
+---
+
+## 💰 Revenue Lanes Built In
+
+| Lane | How |
+|---|---|
+| Affiliate ads | Swap `.ad-inner` button links with Lemfi, Wise, WorldRemit referral URLs |
+| Newsletter sponsorships | Connect `#nlEmail` form to Mailchimp or ConvertKit |
+| Job listings | Charge companies to post in `.job` widget |
+| Directory listings | Charge businesses to appear in `.dir-item` widget |
+| Real estate | Partner with African property platforms for referral fees |
+| Display ads | Replace `.ad-block` sections with Google AdSense or direct sponsors |
+
+---
+
+## 🛠️ How to Deploy
+
+### Option 1 — GitHub Pages (Free, instant)
+1. Push this repo to GitHub
+2. Go to **Settings → Pages**
+3. Set source to `main` branch, root `/`
+4. Your site is live at `https://yourusername.github.io/expat-gh`
+
+### Option 2 — Netlify (Free, custom domain)
+1. Drag the project folder to [netlify.com/drop](https://netlify.com/drop)
+2. Connect your `expat.com.gh` or `expatgh.com` domain
+
+### Option 3 — Any web host
+Upload all files via FTP. No server-side code required.
+
+---
+
+## 🧩 How to Add Real Articles
+
+Each article lives in `js/main.js` inside the `ARTICLES` object:
+
+```js
+yourArticleKey: {
+  cat: 'Finance',
+  gradient: 'linear-gradient(135deg, #0d2818, #1a1a0a)',
+  title: 'Your Article Title Here',
+  meta: '<strong>By Author Name</strong> · Date · X min read',
+  body: `<p>Your article content here...</p>`
+}
+```
+
+Then in `index.html`, add a card:
+```html
+<article class="article-row" onclick="openModal('yourArticleKey')">
+  ...
+</article>
+```
+
+---
+
+## 🎨 Customisation
+
+All colours are in `css/style.css` under `:root`:
+
+```css
+:root {
+  --red:   #C0392B;   /* Primary brand colour */
+  --gold:  #D4A017;   /* Accent */
+  --green: #1D6A3A;   /* Secondary */
+}
+```
+
+---
+
+## 📬 Contact
+
+Built by [Your Name] · [your@email.com]
+
+---
+
+## 📄 License
+
+MIT — free to use and modify.

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Expat.GH — News, jobs, real estate and community for Africans living abroad."/>
+  <meta name="keywords" content="African expat, Ghana diaspora, expat news Africa, African abroad"/>
+  <meta property="og:title" content="Expat.GH — For Africans Living Abroad"/>
+  <meta property="og:description" content="News, jobs, real estate and community for Africans abroad."/>
+  <meta property="og:type" content="website"/>
+  <title>Expat.GH — For Africans Living Abroad</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- TICKER -->
+  <div class="ticker-bar">
+    <div class="ticker-track">
+      <span class="tick">🇬🇭 Ghana IMF review positive — cedi stabilizing</span>
+      <span class="tick">🇳🇬 Nigeria diaspora bond raises $500M</span>
+      <span class="tick">🇰🇪 Kenya digital nomad visa now open</span>
+      <span class="tick">🇿🇦 South Africa expat tax audits begin April 2026</span>
+      <span class="tick">🇸🇳 Senegal opens new investor residency fast-track</span>
+      <span class="tick">🇪🇹 Ethiopia lifts restrictions on dual citizenship</span>
+      <span class="tick">UAE Golden Visa now open to African professionals</span>
+      <span class="tick">UK raises skilled worker salary threshold to £38,700</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">E</span>
+        Expat<span class="logo-accent">.GH</span>
+      </a>
+      <div class="header-utils">
+        <input type="text" class="search-input" placeholder="Search Expat.GH…" id="searchInput" onkeydown="handleSearch(event)"/>
+        <a href="pages/jobs.html" class="util-link">Jobs</a>
+        <a href="pages/directory.html" class="util-link">Directory</a>
+        <a href="pages/advertise.html" class="util-link">Advertise</a>
+        <a href="pages/signin.html" class="btn-primary">Sign In</a>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">&#9776;</button>
+    </div>
+
+    <!-- NAV TABS -->
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+
+        <li class="nav-item has-dropdown">
+          <a href="index.html" class="nav-link active">News</a>
+          <div class="dropdown">
+            <span class="drop-section">News</span>
+            <a href="pages/news-daily.html">Daily Briefing</a>
+            <a href="pages/news-finance.html">Finance &amp; Remittance</a>
+            <a href="pages/news-expat-life.html">Expat Life</a>
+            <a href="pages/news-housing.html">Housing</a>
+            <a href="pages/news-education.html">Education</a>
+            <a href="pages/news-health.html">Health</a>
+            <a href="pages/news-work.html">Work</a>
+            <a href="pages/news-travel.html">Travel</a>
+            <a href="pages/news-business.html">Business &amp; Money</a>
+          </div>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="pages/jobs.html" class="nav-link highlight">Jobs</a>
+          <div class="dropdown">
+            <span class="drop-section">Jobs</span>
+            <a href="pages/jobs.html">All Jobs</a>
+            <a href="pages/jobs-remote.html">Remote Jobs</a>
+            <a href="pages/jobs-africa.html">Jobs in Africa</a>
+            <a href="pages/jobs-tech.html">Tech &amp; Engineering</a>
+            <a href="pages/jobs-finance.html">Finance</a>
+            <a href="pages/jobs-health.html">Healthcare</a>
+            <a href="pages/jobs-post.html">Post a Job</a>
+          </div>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="pages/realestate.html" class="nav-link">Real Estate</a>
+          <div class="dropdown">
+            <span class="drop-section">Real Estate</span>
+            <a href="pages/re-buy.html">Buy in Africa</a>
+            <a href="pages/re-rent.html">Rent in Africa</a>
+            <a href="pages/re-invest.html">Investment Properties</a>
+            <a href="pages/re-mortgage.html">Mortgage Calculator</a>
+            <a href="pages/re-list.html">List Your Property</a>
+          </div>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="pages/visa.html" class="nav-link">Visa &amp; Travel</a>
+          <div class="dropdown">
+            <span class="drop-section">Destinations</span>
+            <a href="pages/visa-europe.html">Europe Visas</a>
+            <a href="pages/visa-uk.html">UK Immigration</a>
+            <a href="pages/visa-uae.html">UAE &amp; Middle East</a>
+            <a href="pages/visa-usa.html">North America</a>
+            <span class="drop-section">Resources</span>
+            <a href="pages/visa-guides.html">Visa Guides</a>
+            <a href="pages/travel-insurance.html">Travel Insurance</a>
+            <a href="pages/passport-ranking.html">Passport Rankings</a>
+          </div>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="pages/community.html" class="nav-link">Community</a>
+          <div class="dropdown">
+            <span class="drop-section">Community</span>
+            <a href="pages/forums.html">Forums</a>
+            <a href="pages/events.html">Events</a>
+            <a href="pages/groups.html">Groups by Country</a>
+            <a href="pages/mentorship.html">Mentorship</a>
+            <a href="pages/write-for-us.html">Write for Us</a>
+          </div>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="pages/culture.html" class="nav-link">Culture</a>
+          <div class="dropdown">
+            <span class="drop-section">Culture</span>
+            <a href="pages/culture-food.html">Food &amp; Cuisine</a>
+            <a href="pages/culture-music.html">Music &amp; Arts</a>
+            <a href="pages/culture-identity.html">Identity &amp; Belonging</a>
+            <a href="pages/culture-language.html">Language</a>
+            <a href="pages/culture-parenting.html">Parenting Abroad</a>
+          </div>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="pages/directory.html" class="nav-link">Directory</a>
+          <div class="dropdown">
+            <span class="drop-section">Find Services</span>
+            <a href="pages/dir-legal.html">Lawyers &amp; Legal</a>
+            <a href="pages/dir-finance.html">Financial Advisors</a>
+            <a href="pages/dir-restaurants.html">African Restaurants</a>
+            <a href="pages/dir-health.html">Healthcare Providers</a>
+            <a href="pages/dir-grocers.html">African Grocers</a>
+            <a href="pages/dir-add.html">Add Your Business</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="pages/newsletter.html" class="nav-link">Newsletters</a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="site-main">
+    <div class="site-wrap">
+
+      <!-- HERO -->
+      <article class="hero-card" onclick="openModal('remit')">
+        <div class="hero-img">
+          <div class="hero-bg hero-bg--remit"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-caption">
+            <span class="cat-badge">Finance · Breaking</span>
+            <h1>African Diaspora Remittances Hit $100B Record — But Fees Still Swallow 8% Per Transfer</h1>
+          </div>
+        </div>
+        <div class="hero-body">
+          <p>New World Bank data reveals the diaspora sent more money home than ever in 2024, yet billions are lost to banks and transfer operators. Here's what every expat needs to know — and the fintech tools fighting back.</p>
+          <div class="article-meta">
+            <span class="author">By Kwame Asante</span>
+            <span>March 10, 2026</span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CONTENT GRID -->
+      <div class="content-grid">
+
+        <!-- MAIN FEED -->
+        <section class="main-feed">
+
+          <!-- CATEGORY TABS -->
+          <div class="tab-nav" role="tablist">
+            <button class="tab-btn active" onclick="switchTab(this,'all')" role="tab">All</button>
+            <button class="tab-btn" onclick="switchTab(this,'daily')" role="tab">Daily News</button>
+            <button class="tab-btn" onclick="switchTab(this,'finance')" role="tab">Finance</button>
+            <button class="tab-btn" onclick="switchTab(this,'visa')" role="tab">Visa &amp; Travel</button>
+            <button class="tab-btn" onclick="switchTab(this,'business')" role="tab">Business</button>
+            <button class="tab-btn" onclick="switchTab(this,'expat-life')" role="tab">Expat Life</button>
+            <button class="tab-btn" onclick="switchTab(this,'culture')" role="tab">Culture</button>
+            <button class="tab-btn" onclick="switchTab(this,'health')" role="tab">Health</button>
+            <button class="tab-btn" onclick="switchTab(this,'work')" role="tab">Work</button>
+          </div>
+
+          <h2 class="section-label">Top Stories <a href="pages/news-daily.html">View all →</a></h2>
+
+          <!-- FEATURED -->
+          <article class="article-card featured" onclick="openModal('visa')">
+            <span class="article-cat">Visa &amp; Travel</span>
+            <h3>UAE Launches 10-Year Golden Visa for African Professionals — Full Requirements Inside</h3>
+            <p>Engineers, doctors, researchers and entrepreneurs earning AED 30,000+/month can now apply for a 10-year UAE residency — no employer sponsor required.</p>
+            <div class="article-meta">
+              <span class="author">Sarah Mensah-Bonsu</span>
+              <span>March 9, 2026</span>
+              <span>4 min read</span>
+            </div>
+          </article>
+
+          <!-- ARTICLE LIST -->
+          <div class="article-list" id="articleList">
+
+            <article class="article-row" onclick="openModal('tax')">
+              <div class="article-thumb thumb--sa"></div>
+              <div class="article-text">
+                <span class="article-cat">Finance</span>
+                <h3>South Africa's Expat Tax 2026: What Changed and What You Must File Now</h3>
+                <p>SARS is actively auditing non-resident accounts. Penalties reach 20% plus interest.</p>
+                <div class="article-meta"><span class="author">Thomas Dlamini</span><span>March 9, 2026</span><span>5 min</span></div>
+              </div>
+            </article>
+
+            <article class="article-row" onclick="openModal('bank')">
+              <div class="article-thumb thumb--money"></div>
+              <div class="article-text">
+                <span class="article-cat cat--gold">Finance</span>
+                <h3>The 5 Cheapest Ways to Send Money to Africa in 2026 — Ranked by Real Total Cost</h3>
+                <p>We tested 12 services. Best: 1.4%. Worst (a UK bank): 9.4%.</p>
+                <div class="article-meta"><span class="author">AfriDiaspora Staff</span><span>March 9, 2026</span><span>5 min</span></div>
+              </div>
+            </article>
+
+            <article class="article-row" onclick="openModal('uk')">
+              <div class="article-thumb thumb--uk"></div>
+              <div class="article-text">
+                <span class="article-cat">Expat Life · UK</span>
+                <h3>UK Immigration Changes 2026: What African Families Must Act On Now</h3>
+                <div class="article-meta"><span class="author">Adaeze Okafor</span><span>March 8, 2026</span><span>5 min</span></div>
+              </div>
+            </article>
+
+            <article class="article-row" onclick="openModal('kenya')">
+              <div class="article-thumb thumb--kenya"></div>
+              <div class="article-text">
+                <span class="article-cat cat--green">Visa &amp; Travel</span>
+                <h3>Kenya's Digital Nomad Visa Is Open: Who Qualifies, What It Costs, How to Apply</h3>
+                <div class="article-meta"><span class="author">Wanjiru Kamau</span><span>March 8, 2026</span><span>4 min</span></div>
+              </div>
+            </article>
+
+            <article class="article-row" onclick="openModal('invest')">
+              <div class="article-thumb thumb--invest"></div>
+              <div class="article-text">
+                <span class="article-cat">Business</span>
+                <h3>Real Estate vs. Stocks: How the African Diaspora Is Building Wealth in 2026</h3>
+                <div class="article-meta"><span class="author">Kofi Asare</span><span>March 7, 2026</span><span>6 min</span></div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- AD -->
+          <div class="ad-block">
+            <p class="ad-label">Advertisement</p>
+            <div class="ad-inner ad-inner--green">
+              <h4>Send Money Home — Zero Transfer Fees</h4>
+              <p>Compare Lemfi, Wise &amp; Chipper Cash. 20+ African countries. Best exchange rates.</p>
+              <button onclick="toast('Redirecting to partner…')">Compare Rates Now →</button>
+            </div>
+          </div>
+
+          <h2 class="section-label">Expat Life <a href="pages/news-expat-life.html">View all →</a></h2>
+
+          <div class="article-list">
+
+            <article class="article-row" onclick="openModal('identity')">
+              <div class="article-thumb thumb--identity"></div>
+              <div class="article-text">
+                <span class="article-cat">Culture · Identity</span>
+                <h3>'I Don't Belong Here or There': The Mental Health Toll of Life Between Two Worlds</h3>
+                <p>Psychologists and expats reflect on cultural duality, diaspora guilt, and what actually helps.</p>
+                <div class="article-meta"><span class="author">Dr. Abena Osei</span><span>March 7, 2026</span><span>8 min</span></div>
+              </div>
+            </article>
+
+            <article class="article-row" onclick="openModal('biz')">
+              <div class="article-thumb thumb--biz"></div>
+              <div class="article-text">
+                <span class="article-cat cat--green">Business</span>
+                <h3>How Ghanaian Diaspora Entrepreneurs Are Building UK-to-Accra Businesses That Work</h3>
+                <div class="article-meta"><span class="author">Ama Owusu</span><span>March 6, 2026</span><span>7 min</span></div>
+              </div>
+            </article>
+
+            <article class="article-row" onclick="openModal('health')">
+              <div class="article-thumb thumb--health"></div>
+              <div class="article-text">
+                <span class="article-cat cat--green">Health</span>
+                <h3>Best Health Insurance Plans for African Expats in Europe — 2026 Comparison</h3>
+                <div class="article-meta"><span class="author">AfriDiaspora Staff</span><span>March 5, 2026</span><span>4 min</span></div>
+              </div>
+            </article>
+
+            <article class="article-row" onclick="openModal('food')">
+              <div class="article-thumb thumb--food"></div>
+              <div class="article-text">
+                <span class="article-cat">Culture · Food</span>
+                <h3>African Restaurants Abroad Are Becoming Serious Businesses — 8 Success Stories</h3>
+                <div class="article-meta"><span class="author">Fatou Diallo</span><span>March 4, 2026</span><span>5 min</span></div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- REAL ESTATE -->
+          <h2 class="section-label">Real Estate in Africa <a href="pages/realestate.html">View all →</a></h2>
+          <div class="re-grid">
+            <div class="re-card" onclick="toast('Full listings coming soon!')">
+              <div class="re-img re-img--ghana"></div>
+              <div class="re-body"><div class="re-price">$85,000</div><div class="re-title">3-Bed House · East Legon</div><div class="re-loc">📍 Accra, Ghana</div></div>
+            </div>
+            <div class="re-card" onclick="toast('Full listings coming soon!')">
+              <div class="re-img re-img--kenya"></div>
+              <div class="re-body"><div class="re-price">$120,000</div><div class="re-title">2-Bed Apartment · Westlands</div><div class="re-loc">📍 Nairobi, Kenya</div></div>
+            </div>
+            <div class="re-card" onclick="toast('Full listings coming soon!')">
+              <div class="re-img re-img--nigeria"></div>
+              <div class="re-body"><div class="re-price">$65,000</div><div class="re-title">4-Bed Villa · Lekki Phase 1</div><div class="re-loc">📍 Lagos, Nigeria</div></div>
+            </div>
+            <div class="re-card" onclick="toast('Full listings coming soon!')">
+              <div class="re-img re-img--sa"></div>
+              <div class="re-body"><div class="re-price">$95,000</div><div class="re-title">3-Bed Townhouse · Sandton</div><div class="re-loc">📍 Johannesburg, S. Africa</div></div>
+            </div>
+          </div>
+
+          <div class="ad-block">
+            <p class="ad-label">Advertisement</p>
+            <div class="ad-inner ad-inner--dark">
+              <h4>Expat Health Insurance That Covers You Back Home Too</h4>
+              <p>Global coverage including medical evacuation. Plans built for Africans abroad.</p>
+              <button onclick="toast('Redirecting to partner…')">Get a Free Quote →</button>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+          <div class="widget">
+            <div class="widget-head">📬 Free Weekly Newsletter</div>
+            <div class="widget-body widget-body--warm">
+              <p>Finance, visa updates, jobs and community for Africans abroad. Every Tuesday.</p>
+              <input type="email" class="widget-input" placeholder="your@email.com" id="nlEmail"/>
+              <button class="widget-btn" onclick="handleNL()">Subscribe Free</button>
+            </div>
+          </div>
+
+          <div class="widget">
+            <div class="widget-head">🔥 Trending Now</div>
+            <div class="widget-body">
+              <div class="trend" onclick="openModal('bank')"><span class="trend-n">1</span><div><strong>Cheapest Ways to Send Money to Africa 2026</strong><small>Finance · 5 min</small></div></div>
+              <div class="trend" onclick="openModal('visa')"><span class="trend-n">2</span><div><strong>UAE Golden Visa for African Professionals</strong><small>Visa · 4 min</small></div></div>
+              <div class="trend" onclick="openModal('uk')"><span class="trend-n">3</span><div><strong>UK Immigration Changes 2026 Explained</strong><small>Expat Life · 5 min</small></div></div>
+              <div class="trend" onclick="openModal('tax')"><span class="trend-n">4</span><div><strong>South Africa Expat Tax: What You Owe</strong><small>Finance · 5 min</small></div></div>
+              <div class="trend" onclick="openModal('invest')"><span class="trend-n">5</span><div><strong>Diaspora Wealth: Real Estate vs Stocks</strong><small>Business · 6 min</small></div></div>
+            </div>
+          </div>
+
+          <div class="widget">
+            <div class="widget-head">🗳️ Community Poll</div>
+            <div class="widget-body">
+              <p class="poll-q">Do you plan to return to Africa permanently within 5 years?</p>
+              <div class="poll-opt"><div class="poll-label"><span>Yes</span><span id="p1v">34%</span></div><div class="poll-bar"><div class="poll-fill" id="p1" style="width:34%"></div></div></div>
+              <div class="poll-opt"><div class="poll-label"><span>No</span><span id="p2v">42%</span></div><div class="poll-bar"><div class="poll-fill poll-fill--green" id="p2" style="width:42%"></div></div></div>
+              <div class="poll-opt"><div class="poll-label"><span>Undecided</span><span id="p3v">24%</span></div><div class="poll-bar"><div class="poll-fill poll-fill--gray" id="p3" style="width:24%"></div></div></div>
+              <button class="poll-btn" onclick="handleVote()">Vote</button>
+              <p class="poll-meta">1,284 readers voted · Poll open</p>
+            </div>
+          </div>
+
+          <div class="widget">
+            <div class="widget-head widget-head--green">💼 Featured Jobs</div>
+            <div class="widget-body">
+              <div class="job" onclick="toast('Job board coming soon!')"><div class="job-title">Senior Software Engineer</div><div class="job-co">Flutterwave · Lagos / Remote</div><div class="job-tags"><span class="tag tag--remote">Remote</span><span class="tag">Tech</span></div></div>
+              <div class="job" onclick="toast('Job board coming soon!')"><div class="job-title">Financial Analyst</div><div class="job-co">Standard Bank · Johannesburg</div><div class="job-tags"><span class="tag">Finance</span><span class="tag">Full-time</span></div></div>
+              <div class="job" onclick="toast('Job board coming soon!')"><div class="job-title">Product Manager – Diaspora</div><div class="job-co">Lemfi · London / Remote</div><div class="job-tags"><span class="tag tag--remote">Remote</span><span class="tag">Fintech</span></div></div>
+              <div class="job" onclick="toast('Job board coming soon!')"><div class="job-title">Content Editor</div><div class="job-co">Expat.GH · Remote</div><div class="job-tags"><span class="tag tag--remote">Remote</span><span class="tag">Media</span></div></div>
+              <a href="pages/jobs.html" class="widget-more">View all jobs →</a>
+            </div>
+          </div>
+
+          <div class="widget">
+            <div class="widget-head">🌍 Browse by Country</div>
+            <div class="widget-body">
+              <div class="country-grid" id="ctryGrid">
+                <button class="ctry-btn active" onclick="selectCtry(this)">All Africa</button>
+                <button class="ctry-btn" onclick="selectCtry(this)">🇬🇭 Ghana</button>
+                <button class="ctry-btn" onclick="selectCtry(this)">🇳🇬 Nigeria</button>
+                <button class="ctry-btn" onclick="selectCtry(this)">🇰🇪 Kenya</button>
+                <button class="ctry-btn" onclick="selectCtry(this)">🇿🇦 S. Africa</button>
+                <button class="ctry-btn" onclick="selectCtry(this)">🇸🇳 Senegal</button>
+                <button class="ctry-btn" onclick="selectCtry(this)">🇪🇹 Ethiopia</button>
+                <button class="ctry-btn" onclick="selectCtry(this)">🇨🇮 Côte d'Ivoire</button>
+                <button class="ctry-btn" onclick="selectCtry(this)">🇹🇿 Tanzania</button>
+                <button class="ctry-btn" onclick="selectCtry(this)">🇺🇬 Uganda</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget">
+            <div class="widget-head widget-head--gold">🏢 Business Directory</div>
+            <div class="widget-body">
+              <div class="dir-item" onclick="toast('Directory coming soon!')"><span class="dir-icon">⚖️</span><div><strong>Diaspora Legal Group</strong><small>Immigration Law · London</small></div></div>
+              <div class="dir-item" onclick="toast('Directory coming soon!')"><span class="dir-icon">💰</span><div><strong>AfriWealth Advisors</strong><small>Financial Planning · Toronto</small></div></div>
+              <div class="dir-item" onclick="toast('Directory coming soon!')"><span class="dir-icon">🍲</span><div><strong>Mama Africa Kitchen</strong><small>Restaurant · Amsterdam</small></div></div>
+              <div class="dir-item" onclick="toast('Directory coming soon!')"><span class="dir-icon">🏥</span><div><strong>African Health Connect</strong><small>Healthcare · Berlin</small></div></div>
+              <a href="pages/directory.html" class="widget-more">View full directory →</a>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo--white">
+          <span class="logo-icon">E</span>Expat<span class="logo-accent">.GH</span>
+        </a>
+        <p>Independent news, jobs, and resources for Africans living and building outside the continent.</p>
+        <div class="social-row">
+          <button onclick="toast('Facebook coming soon!')">f</button>
+          <button onclick="toast('Twitter coming soon!')">𝕏</button>
+          <button onclick="toast('Instagram coming soon!')">📷</button>
+          <button onclick="toast('WhatsApp coming soon!')">💬</button>
+          <button onclick="toast('LinkedIn coming soon!')">in</button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>News</h5>
+        <ul>
+          <li><a href="pages/news-daily.html">Daily Briefing</a></li>
+          <li><a href="pages/news-finance.html">Finance</a></li>
+          <li><a href="pages/visa.html">Visa &amp; Travel</a></li>
+          <li><a href="pages/news-business.html">Business</a></li>
+          <li><a href="pages/news-expat-life.html">Expat Life</a></li>
+          <li><a href="pages/news-health.html">Health</a></li>
+          <li><a href="pages/culture.html">Culture</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="pages/jobs.html">Jobs Board</a></li>
+          <li><a href="pages/realestate.html">Real Estate</a></li>
+          <li><a href="pages/directory.html">Directory</a></li>
+          <li><a href="pages/newsletter.html">Newsletters</a></li>
+          <li><a href="pages/community.html">Community</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/advertise.html">Advertise</a></li>
+          <li><a href="pages/write-for-us.html">Write for Us</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="pages/terms.html">Terms of Service</a></li>
+          <li><a href="pages/privacy.html">Privacy Policy</a></li>
+          <li><a href="pages/cookies.html">Cookie Policy</a></li>
+          <li><a href="pages/advertise.html">Advertising Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Expat.GH · Independent editorial</span>
+      <span>Built for Africans abroad</span>
+    </div>
+  </footer>
+
+  <!-- ARTICLE MODAL -->
+  <div class="modal-bg" id="modal" onclick="closeModalBg(event)" role="dialog" aria-modal="true">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+      <div id="modalInner"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="alert"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
